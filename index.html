@@ -1,12 +1,21 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="SmileBright Dental Clinic offers gentle, modern dental care. Book your appointment today for checkups, cosmetic dentistry, implants & more.">
+  <meta name="theme-color" content="#2563eb">
+  
+  <!-- GitHub Pages: Ensure base path works for subdirectories -->
+  <base href="/">
+  
+  <!-- Favicon (inline SVG - no external request) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🦷%3C/text%3E%3C/svg%3E">
+  
   <title>SmileBright Dental Clinic | Expert Care, Beautiful Smiles</title>
+  
   <style>
+    /* ===== CSS VARIABLES & RESET ===== */
     :root {
       --primary: #2563eb;
       --primary-dark: #1d4ed8;
@@ -16,283 +25,699 @@
       --white: #ffffff;
       --shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
       --radius: 8px;
+      --transition: all 0.2s ease;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: var(--secondary); background: var(--light); }
-    a { text-decoration: none; color: inherit; }
-    img { max-width: 100%; display: block; }
+    html { scroll-behavior: smooth; }
+    body { 
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; 
+      line-height: 1.6; 
+      color: var(--secondary); 
+      background: var(--light); 
+      -webkit-font-smoothing: antialiased;
+    }
+    a { text-decoration: none; color: inherit; transition: var(--transition); }
+    img { max-width: 100%; height: auto; display: block; }
+    button { font-family: inherit; }
+    
+    /* ===== UTILITIES ===== */
     .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
-    .btn { display: inline-block; padding: 0.875rem 1.75rem; background: var(--primary); color: var(--white); border-radius: var(--radius); font-weight: 600; transition: 0.2s; border: none; cursor: pointer; }
-    .btn:hover { background: var(--primary-dark); transform: translateY(-2px); }
+    .btn { 
+      display: inline-block; 
+      padding: 0.875rem 1.75rem; 
+      background: var(--primary); 
+      color: var(--white); 
+      border-radius: var(--radius); 
+      font-weight: 600; 
+      transition: var(--transition); 
+      border: none; 
+      cursor: pointer;
+      text-align: center;
+    }
+    .btn:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: var(--shadow); }
+    .btn:active { transform: translateY(0); }
     .section { padding: 5rem 0; }
     .section-title { text-align: center; margin-bottom: 3rem; }
-    .section-title h2 { font-size: 2.25rem; margin-bottom: 0.5rem; }
+    .section-title h2 { font-size: 2.25rem; margin-bottom: 0.5rem; color: var(--secondary); }
     .section-title p { color: var(--gray); max-width: 650px; margin: 0 auto; }
     
-    /* Header */
-    header { background: var(--white); box-shadow: var(--shadow); position: sticky; top: 0; z-index: 100; }
-    nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
-    .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); display: flex; align-items: center; gap: 0.5rem; }
-    .nav-links { display: flex; gap: 2rem; align-items: center; }
-    .nav-links a { font-weight: 500; color: var(--secondary); transition: color 0.2s; }
+    /* ===== HEADER & NAV ===== */
+    header { 
+      background: var(--white); 
+      box-shadow: var(--shadow); 
+      position: sticky; 
+      top: 0; 
+      z-index: 1000; 
+    }
+    nav { 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      padding: 1rem 0; 
+    }
+    .logo { 
+      font-size: 1.5rem; 
+      font-weight: 800; 
+      color: var(--primary); 
+      display: flex; 
+      align-items: center; 
+      gap: 0.5rem; 
+    }
+    .nav-links { 
+      display: flex; 
+      gap: 2rem; 
+      align-items: center; 
+      list-style: none;
+    }
+    .nav-links a { 
+      font-weight: 500; 
+      color: var(--secondary); 
+      padding: 0.5rem 0;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: var(--transition);
+    }
+    .nav-links a:hover::after { width: 100%; }
     .nav-links a:hover { color: var(--primary); }
-    .mobile-toggle { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--secondary); }
+    .mobile-toggle { 
+      display: none; 
+      background: none; 
+      border: none; 
+      font-size: 1.75rem; 
+      cursor: pointer; 
+      color: var(--secondary);
+      padding: 0.5rem;
+      line-height: 1;
+    }
     
-    /* Hero */
-    .hero { background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%); padding: 7rem 0 6rem; text-align: center; }
-    .hero h1 { font-size: 3.25rem; margin-bottom: 1rem; line-height: 1.2; color: var(--secondary); }
-    .hero p { font-size: 1.25rem; color: var(--gray); margin-bottom: 2.5rem; max-width: 750px; margin-left: auto; margin-right: auto; }
+    /* ===== HERO SECTION ===== */
+    .hero { 
+      background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%); 
+      padding: 7rem 0 6rem; 
+      text-align: center; 
+    }
+    .hero h1 { 
+      font-size: clamp(2rem, 5vw, 3.25rem); 
+      margin-bottom: 1rem; 
+      line-height: 1.2; 
+      color: var(--secondary);
+      font-weight: 800;
+    }
+    .hero p { 
+      font-size: 1.125rem; 
+      color: var(--gray); 
+      margin-bottom: 2.5rem; 
+      max-width: 750px; 
+      margin-left: auto; 
+      margin-right: auto; 
+    }
     
-    /* Services */
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; }
-    .service-card { background: var(--white); padding: 2.5rem 2rem; border-radius: var(--radius); box-shadow: var(--shadow); text-align: center; transition: 0.3s; border: 1px solid #e2e8f0; }
-    .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
-    .service-icon { font-size: 2.5rem; margin-bottom: 1rem; }
-    .service-card h3 { margin-bottom: 0.5rem; }
+    /* ===== SERVICES ===== */
+    .services-grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+      gap: 2rem; 
+    }
+    .service-card { 
+      background: var(--white); 
+      padding: 2.5rem 2rem; 
+      border-radius: var(--radius); 
+      box-shadow: var(--shadow); 
+      text-align: center; 
+      transition: var(--transition); 
+      border: 1px solid #e2e8f0; 
+    }
+    .service-card:hover { 
+      transform: translateY(-5px); 
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); 
+      border-color: var(--primary);
+    }
+    .service-icon { font-size: 2.5rem; margin-bottom: 1rem; line-height: 1; }
+    .service-card h3 { margin-bottom: 0.5rem; font-size: 1.25rem; }
+    .service-card p { color: var(--gray); font-size: 0.95rem; }
     
-    /* Why Us */
+    /* ===== WHY US ===== */
     .why-us { background: var(--secondary); color: var(--white); }
-    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2.5rem; text-align: center; }
+    .why-us .section-title h2 { color: var(--white); }
+    .why-us .section-title p { color: #cbd5e1; }
+    .why-grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+      gap: 2.5rem; 
+      text-align: center; 
+    }
+    .why-item { padding: 1rem; }
+    .why-icon { font-size: 2.5rem; margin-bottom: 1rem; }
     .why-item h3 { margin: 1rem 0 0.5rem; font-size: 1.25rem; }
-    .why-item p { color: #cbd5e1; }
+    .why-item p { color: #cbd5e1; font-size: 0.95rem; }
     
-    /* Testimonials */
-    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-    .testimonial { background: var(--white); padding: 2rem; border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid #e2e8f0; }
+    /* ===== TESTIMONIALS ===== */
+    .testimonials-grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+      gap: 2rem; 
+    }
+    .testimonial { 
+      background: var(--white); 
+      padding: 2rem; 
+      border-radius: var(--radius); 
+      box-shadow: var(--shadow); 
+      border: 1px solid #e2e8f0; 
+      transition: var(--transition);
+    }
+    .testimonial:hover { border-color: var(--primary); }
     .stars { color: #f59e0b; margin-bottom: 1rem; font-size: 1.1rem; letter-spacing: 2px; }
-    .testimonial p { font-style: italic; margin-bottom: 1.25rem; color: #334155; }
-    .client { font-weight: 600; color: var(--secondary); }
+    .testimonial p { font-style: italic; margin-bottom: 1.25rem; color: #334155; font-size: 0.95rem; }
+    .client { font-weight: 600; color: var(--secondary); font-size: 0.95rem; }
     
-    /* Appointment */
+    /* ===== APPOINTMENT FORM ===== */
     .appointment { background: #f1f5f9; }
-    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; max-width: 800px; margin: 0 auto; }
+    .form-grid { 
+      display: grid; 
+      grid-template-columns: 1fr 1fr; 
+      gap: 1.5rem; 
+      max-width: 800px; 
+      margin: 0 auto; 
+    }
     .form-group { display: flex; flex-direction: column; }
     .form-group.full { grid-column: span 2; }
-    label { margin-bottom: 0.5rem; font-weight: 500; font-size: 0.95rem; }
-    input, select, textarea { padding: 0.875rem; border: 1px solid #cbd5e1; border-radius: var(--radius); font-family: inherit; font-size: 1rem; transition: border 0.2s; }
-    input:focus, select:focus, textarea:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(37,99,235,0.1); }
+    label { 
+      margin-bottom: 0.5rem; 
+      font-weight: 500; 
+      font-size: 0.95rem; 
+      color: var(--secondary);
+    }
+    input, select, textarea { 
+      padding: 0.875rem; 
+      border: 1px solid #cbd5e1; 
+      border-radius: var(--radius); 
+      font-family: inherit; 
+      font-size: 1rem; 
+      transition: var(--transition);
+      background: var(--white);
+    }
+    input:focus, select:focus, textarea:focus { 
+      outline: none; 
+      border-color: var(--primary); 
+      box-shadow: 0 0 0 3px rgba(37,99,235,0.15); 
+    }
     textarea { resize: vertical; min-height: 100px; }
+    .form-note { 
+      grid-column: span 2; 
+      text-align: center; 
+      color: var(--gray); 
+      font-size: 0.875rem; 
+      margin-top: -1rem;
+    }
     
-    /* Footer */
-    footer { background: var(--secondary); color: var(--white); padding: 4rem 0 2rem; text-align: center; }
-    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2.5rem; text-align: left; margin-bottom: 2.5rem; }
+    /* ===== FOOTER ===== */
+    footer { 
+      background: var(--secondary); 
+      color: var(--white); 
+      padding: 4rem 0 2rem; 
+      text-align: center; 
+    }
+    .footer-grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+      gap: 2.5rem; 
+      text-align: left; 
+      margin-bottom: 2.5rem; 
+    }
     .footer-col h4 { margin-bottom: 1rem; color: #93c5fd; font-size: 1.1rem; }
-    .footer-col p, .footer-col a { color: #cbd5e1; margin-bottom: 0.6rem; display: block; }
-    .footer-col a:hover { color: #fff; }
-    .copyright { border-top: 1px solid #334155; padding-top: 1.5rem; color: #94a3b8; font-size: 0.9rem; }
+    .footer-col p, 
+    .footer-col a { 
+      color: #cbd5e1; 
+      margin-bottom: 0.6rem; 
+      display: block; 
+      font-size: 0.95rem;
+    }
+    .footer-col a:hover { color: var(--white); text-decoration: underline; }
+    .social-links { display: flex; gap: 1rem; margin-top: 1rem; }
+    .social-links a { 
+      width: 36px; 
+      height: 36px; 
+      border-radius: 50%; 
+      background: rgba(255,255,255,0.1); 
+      display: flex; 
+      align-items: center; 
+      justify-content: center;
+      transition: var(--transition);
+    }
+    .social-links a:hover { background: var(--primary); transform: translateY(-2px); }
+    .copyright { 
+      border-top: 1px solid #334155; 
+      padding-top: 1.5rem; 
+      color: #94a3b8; 
+      font-size: 0.9rem; 
+    }
     
-    /* Responsive */
+    /* ===== RESPONSIVE DESIGN ===== */
     @media (max-width: 768px) {
       .mobile-toggle { display: block; }
-      .nav-links { position: fixed; top: 70px; left: 0; right: 0; background: var(--white); flex-direction: column; padding: 2rem; gap: 1.5rem; transform: translateY(-150%); transition: 0.3s; box-shadow: var(--shadow); z-index: 99; }
+      .nav-links { 
+        position: fixed; 
+        top: 70px; 
+        left: 0; 
+        right: 0; 
+        background: var(--white); 
+        flex-direction: column; 
+        padding: 2rem; 
+        gap: 1.5rem; 
+        transform: translateY(-150%); 
+        transition: transform 0.3s ease;
+        box-shadow: var(--shadow); 
+        z-index: 999; 
+        list-style: none;
+      }
       .nav-links.active { transform: translateY(0); }
-      .hero h1 { font-size: 2.25rem; }
+      .hero { padding: 5rem 0 4rem; }
       .form-grid { grid-template-columns: 1fr; }
       .form-group.full { grid-column: span 1; }
       .section { padding: 4rem 0; }
+      .section-title h2 { font-size: 1.75rem; }
+    }
+    
+    /* ===== ACCESSIBILITY ===== */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+    
+    /* ===== FORM SUCCESS MESSAGE ===== */
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 1rem;
+      background: #dcfce7;
+      color: #166534;
+      border-radius: var(--radius);
+      margin-bottom: 1.5rem;
+      border: 1px solid #bbf7d0;
+    }
+    .form-success.show { display: block; animation: fadeIn 0.3s ease; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-  <!-- Header -->
+  <!-- Skip to content link for accessibility -->
+  <a href="#main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;" 
+     onfocus="this.style.position='static';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';"
+     onblur="this.style.position='absolute';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">
+    Skip to main content
+  </a>
+
+  <!-- ===== HEADER ===== -->
   <header>
     <div class="container">
-      <nav>
-        <a href="#" class="logo">🦷 SmileBright Dental</a>
-        <button class="mobile-toggle" aria-label="Toggle navigation">☰</button>
-        <div class="nav-links">
-          <a href="#services">Services</a>
-          <a href="#why-us">Why Us</a>
-          <a href="#testimonials">Reviews</a>
-          <a href="#appointment" class="btn">Book Appointment</a>
-        </div>
+      <nav aria-label="Main navigation">
+        <a href="#" class="logo" aria-label="SmileBright Dental Home">
+          <span aria-hidden="true">🦷</span> SmileBright Dental
+        </a>
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+          <span aria-hidden="true">☰</span>
+        </button>
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#why-us">Why Us</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#appointment" class="btn">Book Appointment</a></li>
+        </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container">
-      <h1>Your Smile, Our Passion</h1>
-      <p>Experience gentle, modern dental care in a comfortable environment. From routine checkups to cosmetic transformations, we're here for your healthiest smile.</p>
-      <a href="#appointment" class="btn">Schedule Your Visit</a>
-    </div>
-  </section>
+  <main id="main-content">
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <h1 id="hero-title">Your Smile, Our Passion</h1>
+        <p>Experience gentle, modern dental care in a comfortable environment. From routine checkups to cosmetic transformations, we're here for your healthiest smile.</p>
+        <a href="#appointment" class="btn" aria-label="Schedule your dental appointment">Schedule Your Visit</a>
+      </div>
+    </section>
 
-  <!-- Services -->
-  <section id="services" class="section">
-    <div class="container">
-      <div class="section-title">
-        <h2>Our Services</h2>
-        <p>Comprehensive dental care tailored to your needs, using the latest technology and techniques.</p>
+    <!-- ===== SERVICES SECTION ===== -->
+    <section id="services" class="section" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-title">
+          <h2 id="services-title">Our Services</h2>
+          <p>Comprehensive dental care tailored to your needs, using the latest technology and techniques.</p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">🩺</div>
+            <h3>General Dentistry</h3>
+            <p>Routine cleanings, exams, fillings, and preventive care to keep your smile healthy year-round.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">✨</div>
+            <h3>Cosmetic Dentistry</h3>
+            <p>Professional whitening, veneers, and bonding for a brighter, more confident smile.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">🦴</div>
+            <h3>Dental Implants</h3>
+            <p>Permanent, natural-looking tooth replacements that restore function and aesthetics.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">😁</div>
+            <h3>Orthodontics</h3>
+            <p>Traditional braces and clear aligners to straighten teeth for teens and adults.</p>
+          </article>
+        </div>
       </div>
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">🩺</div>
-          <h3>General Dentistry</h3>
-          <p>Routine cleanings, exams, fillings, and preventive care to keep your smile healthy year-round.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">✨</div>
-          <h3>Cosmetic Dentistry</h3>
-          <p>Professional whitening, veneers, and bonding for a brighter, more confident smile.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🦴</div>
-          <h3>Dental Implants</h3>
-          <p>Permanent, natural-looking tooth replacements that restore function and aesthetics.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">😁</div>
-          <h3>Orthodontics</h3>
-          <p>Traditional braces and clear aligners to straighten teeth for teens and adults.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Why Us -->
-  <section id="why-us" class="section why-us">
-    <div class="container">
-      <div class="section-title">
-        <h2 style="color:white;">Why Choose SmileBright?</h2>
-        <p style="color:#cbd5e1;">We combine clinical expertise with genuine compassion to deliver exceptional dental experiences.</p>
+    <!-- ===== WHY US SECTION ===== -->
+    <section id="why-us" class="section why-us" aria-labelledby="why-title">
+      <div class="container">
+        <div class="section-title">
+          <h2 id="why-title">Why Choose SmileBright?</h2>
+          <p>We combine clinical expertise with genuine compassion to deliver exceptional dental experiences.</p>
+        </div>
+        <div class="why-grid">
+          <div class="why-item">
+            <div class="why-icon" aria-hidden="true">👨‍⚕️</div>
+            <h3>Expert Dentists</h3>
+            <p>Board-certified professionals with 15+ years of combined clinical experience.</p>
+          </div>
+          <div class="why-item">
+            <div class="why-icon" aria-hidden="true">🔬</div>
+            <h3>Modern Technology</h3>
+            <p>Digital X-rays, 3D imaging, and laser dentistry for precise, comfortable care.</p>
+          </div>
+          <div class="why-item">
+            <div class="why-icon" aria-hidden="true">🛋️</div>
+            <h3>Comfort-First Care</h3>
+            <p>Anxiety-free environment with sedation options and personalized treatment plans.</p>
+          </div>
+        </div>
       </div>
-      <div class="why-grid">
-        <div class="why-item">
-          <div style="font-size:2rem;">👨‍⚕️</div>
-          <h3>Expert Dentists</h3>
-          <p>Board-certified professionals with 15+ years of combined clinical experience.</p>
-        </div>
-        <div class="why-item">
-          <div style="font-size:2rem;">🔬</div>
-          <h3>Modern Technology</h3>
-          <p>Digital X-rays, 3D imaging, and laser dentistry for precise, comfortable care.</p>
-        </div>
-        <div class="why-item">
-          <div style="font-size:2rem;">🛋️</div>
-          <h3>Comfort-First Care</h3>
-          <p>Anxiety-free environment with sedation options and personalized treatment plans.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Testimonials -->
-  <section id="testimonials" class="section">
-    <div class="container">
-      <div class="section-title">
-        <h2>What Our Patients Say</h2>
-        <p>Join thousands of satisfied patients who trust us with their smiles.</p>
+    <!-- ===== TESTIMONIALS SECTION ===== -->
+    <section id="testimonials" class="section" aria-labelledby="testimonials-title">
+      <div class="container">
+        <div class="section-title">
+          <h2 id="testimonials-title">What Our Patients Say</h2>
+          <p>Join thousands of satisfied patients who trust us with their smiles.</p>
+        </div>
+        <div class="testimonials-grid">
+          <blockquote class="testimonial">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>"I used to dread dental visits, but the team at SmileBright made me feel completely at ease. My teeth have never looked better!"</p>
+            <footer class="client">— Sarah M.</footer>
+          </blockquote>
+          <blockquote class="testimonial">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>"Professional, thorough, and genuinely caring. They explained every step of my implant procedure. Highly recommend!"</p>
+            <footer class="client">— David R.</footer>
+          </blockquote>
+          <blockquote class="testimonial">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>"Brought my kids here for their first checkup. The staff was amazing with them. We're lifelong patients now!"</p>
+            <footer class="client">— Elena T.</footer>
+          </blockquote>
+        </div>
       </div>
-      <div class="testimonials-grid">
-        <div class="testimonial">
-          <div class="stars">★★★★★</div>
-          <p>"I used to dread dental visits, but the team at SmileBright made me feel completely at ease. My teeth have never looked better!"</p>
-          <div class="client">- Sarah M.</div>
-        </div>
-        <div class="testimonial">
-          <div class="stars">★★★★★</div>
-          <p>"Professional, thorough, and genuinely caring. They explained every step of my implant procedure. Highly recommend!"</p>
-          <div class="client">- David R.</div>
-        </div>
-        <div class="testimonial">
-          <div class="stars">★★★★★</div>
-          <p>"Brought my kids here for their first checkup. The staff was amazing with them. We're lifelong patients now!"</p>
-          <div class="client">- Elena T.</div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Appointment -->
-  <section id="appointment" class="section appointment">
-    <div class="container">
-      <div class="section-title">
-        <h2>Book Your Appointment</h2>
-        <p>Fill out the form below and we'll contact you within 24 hours to confirm your visit.</p>
+    <!-- ===== APPOINTMENT SECTION ===== -->
+    <section id="appointment" class="section appointment" aria-labelledby="appointment-title">
+      <div class="container">
+        <div class="section-title">
+          <h2 id="appointment-title">Book Your Appointment</h2>
+          <p>Fill out the form below and we'll contact you within 24 hours to confirm your visit.</p>
+        </div>
+        
+        <!-- Success message (hidden by default) -->
+        <div class="form-success" id="form-success" role="alert" aria-live="polite">
+          ✅ Thank you! Your appointment request has been received. We'll contact you within 24 hours.
+        </div>
+        
+        <!-- 
+          FORM SETUP OPTIONS FOR GITHUB PAGES:
+          
+          OPTION 1 (Recommended): Use Formspree (free tier)
+          1. Go to https://formspree.io
+          2. Create a form endpoint
+          3. Replace "YOUR_FORMSPREE_ID" below with your actual ID
+          
+          OPTION 2: Use Netlify Forms (if hosting on Netlify)
+          Add: <form name="appointment" netlify netlify-honeypot="bot-field" ...>
+          
+          OPTION 3: Keep the JavaScript alert version below for demo purposes
+        -->
+        <form class="form-grid" id="appointment-form" novalidate>
+          <div class="form-group">
+            <label for="name">Full Name <span aria-hidden="true">*</span></label>
+            <input type="text" id="name" name="name" required placeholder="John Doe" autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number <span aria-hidden="true">*</span></label>
+            <input type="tel" id="phone" name="phone" required placeholder="(555) 123-4567" autocomplete="tel">
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" required placeholder="john@example.com" autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="service">Service Needed <span aria-hidden="true">*</span></label>
+            <select id="service" name="service" required>
+              <option value="">Select a service</option>
+              <option>General Checkup & Cleaning</option>
+              <option>Cosmetic Consultation</option>
+              <option>Dental Implants</option>
+              <option>Orthodontics</option>
+              <option>Emergency Care</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label for="message">Additional Notes</label>
+            <textarea id="message" name="message" rows="4" placeholder="Any specific concerns or preferred appointment times?"></textarea>
+          </div>
+          <div class="form-note">* Required fields</div>
+          <div class="form-group full" style="text-align:center;">
+            <button type="submit" class="btn">Request Appointment</button>
+          </div>
+        </form>
       </div>
-      <form class="form-grid" onsubmit="event.preventDefault(); alert('Thank you! We will contact you shortly.');">
-        <div class="form-group">
-          <label for="name">Full Name</label>
-          <input type="text" id="name" required placeholder="John Doe">
-        </div>
-        <div class="form-group">
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" required placeholder="(555) 123-4567">
-        </div>
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" required placeholder="john@example.com">
-        </div>
-        <div class="form-group">
-          <label for="service">Service Needed</label>
-          <select id="service" required>
-            <option value="">Select a service</option>
-            <option>General Checkup & Cleaning</option>
-            <option>Cosmetic Consultation</option>
-            <option>Dental Implants</option>
-            <option>Orthodontics</option>
-            <option>Emergency Care</option>
-          </select>
-        </div>
-        <div class="form-group full">
-          <label for="message">Additional Notes</label>
-          <textarea id="message" rows="4" placeholder="Any specific concerns or preferred appointment times?"></textarea>
-        </div>
-        <div class="form-group full" style="text-align:center;">
-          <button type="submit" class="btn">Request Appointment</button>
-        </div>
-      </form>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- Footer -->
+  <!-- ===== FOOTER ===== -->
   <footer>
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
           <h4>SmileBright Dental</h4>
           <p>Providing exceptional dental care with a gentle touch since 2010.</p>
+          <div class="social-links" aria-label="Social media links">
+            <a href="#" aria-label="Facebook" role="link">f</a>
+            <a href="#" aria-label="Instagram" role="link">📷</a>
+            <a href="#" aria-label="Google Business" role="link">G</a>
+          </div>
         </div>
         <div class="footer-col">
           <h4>Contact Us</h4>
-          <p>📍 123 Wellness Blvd, Suite 200</p>
-          <p>📞 <a href="tel:+15559876543">(555) 987-6543</a></p>
-          <p>✉️ <a href="mailto:hello@smilebrightdental.com">hello@smilebrightdental.com</a></p>
+          <address style="font-style:normal;">
+            <p>📍 123 Wellness Blvd, Suite 200<br>San Francisco, CA 94107</p>
+            <p>📞 <a href="tel:+15559876543">(555) 987-6543</a></p>
+            <p>✉️ <a href="mailto:hello@smilebrightdental.com">hello@smilebrightdental.com</a></p>
+          </address>
         </div>
         <div class="footer-col">
           <h4>Office Hours</h4>
           <p>Mon - Fri: 8:00 AM - 6:00 PM</p>
           <p>Saturday: 9:00 AM - 2:00 PM</p>
           <p>Sunday: Closed</p>
+          <p style="margin-top:1rem;font-size:0.875rem;color:#94a3b8;">
+            <small>Emergency? Call us anytime.</small>
+          </p>
         </div>
       </div>
       <div class="copyright">
-        © 2026 SmileBright Dental Clinic. All rights reserved.
+        © <span id="year">2026</span> SmileBright Dental Clinic. All rights reserved.
+        <br>
+        <small style="color:#64748b;">
+          <a href="#" style="color:#94a3b8;text-decoration:underline;">Privacy Policy</a> • 
+          <a href="#" style="color:#94a3b8;text-decoration:underline;">Terms of Service</a>
+        </small>
       </div>
     </div>
   </footer>
 
+  <!-- ===== JAVASCRIPT ===== -->
   <script>
-    // Mobile menu toggle
-    const toggle = document.querySelector('.mobile-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    toggle.addEventListener('click', () => navLinks.classList.toggle('active'));
-
-    // Close mobile menu when clicking a link
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => navLinks.classList.remove('active'));
-    });
-
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if(target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    document.addEventListener('DOMContentLoaded', function() {
+      // Update copyright year automatically
+      document.getElementById('year').textContent = new Date().getFullYear();
+      
+      // Mobile menu toggle with accessibility
+      const toggle = document.querySelector('.mobile-toggle');
+      const navLinks = document.getElementById('nav-menu');
+      
+      if (toggle && navLinks) {
+        toggle.addEventListener('click', function() {
+          const isExpanded = this.getAttribute('aria-expanded') === 'true';
+          this.setAttribute('aria-expanded', !isExpanded);
+          navLinks.classList.toggle('active');
+        });
+        
+        // Close menu when clicking a link (mobile)
+        navLinks.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            toggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+      
+      // Smooth scrolling for anchor links (with offset for sticky header)
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          if (href === '#') return;
+          
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            const headerOffset = 80;
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }
+        });
       });
+      
+      // Form handling (demo mode - replace with Formspree for production)
+      const form = document.getElementById('appointment-form');
+      const successMessage = document.getElementById('form-success');
+      
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          // Basic validation feedback
+          if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+          }
+          
+          // Show success message (demo)
+          successMessage.classList.add('show');
+          form.reset();
+          
+          // Hide success message after 5 seconds
+          setTimeout(() => {
+            successMessage.classList.remove('show');
+          }, 5000);
+          
+          /* 
+            PRODUCTION FORM SUBMISSION (Formspree example):
+            
+            fetch('https://formspree.io/f/YOUR_FORMSPREE_ID', {
+              method: 'POST',
+              body: new FormData(form),
+              headers: { 'Accept': 'application/json' }
+            })
+            .then(response => {
+              if (response.ok) {
+                successMessage.classList.add('show');
+                form.reset();
+              } else {
+                alert('Oops! There was a problem sending your form.');
+              }
+            })
+            .catch(() => {
+              alert('Oops! There was a problem sending your form.');
+            });
+          */
+        });
+      }
+      
+      // Close mobile menu if clicking outside
+      document.addEventListener('click', function(e) {
+        if (navLinks && navLinks.classList.contains('active') && 
+            !navLinks.contains(e.target) && 
+            !toggle.contains(e.target)) {
+          navLinks.classList.remove('active');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+      
+      // Handle keyboard navigation for mobile menu
+      if (toggle) {
+        toggle.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            this.click();
+          }
+        });
+      }
     });
+  </script>
+  
+  <!-- Structured Data for SEO (Google) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "SmileBright Dental Clinic",
+    "image": "https://example.com/logo.png",
+    "@id": "https://smilebrightdental.com",
+    "url": "https://smilebrightdental.com",
+    "telephone": "+1-555-987-6543",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Wellness Blvd, Suite 200",
+      "addressLocality": "San Francisco",
+      "addressRegion": "CA",
+      "postalCode": "94107",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 37.7749,
+      "longitude": -122.4194
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "09:00",
+        "closes": "14:00"
+      }
+    ],
+    "priceRange": "$$"
+  }
   </script>
 </body>
 </html>
