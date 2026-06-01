@@ -1,1 +1,298 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SmileBright Dental Clinic offers gentle, modern dental care. Book your appointment today for checkups, cosmetic dentistry, implants & more.">
+  <title>SmileBright Dental Clinic | Expert Care, Beautiful Smiles</title>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --secondary: #0f172a;
+      --light: #f8fafc;
+      --gray: #64748b;
+      --white: #ffffff;
+      --shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+      --radius: 8px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: var(--secondary); background: var(--light); }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .btn { display: inline-block; padding: 0.875rem 1.75rem; background: var(--primary); color: var(--white); border-radius: var(--radius); font-weight: 600; transition: 0.2s; border: none; cursor: pointer; }
+    .btn:hover { background: var(--primary-dark); transform: translateY(-2px); }
+    .section { padding: 5rem 0; }
+    .section-title { text-align: center; margin-bottom: 3rem; }
+    .section-title h2 { font-size: 2.25rem; margin-bottom: 0.5rem; }
+    .section-title p { color: var(--gray); max-width: 650px; margin: 0 auto; }
+    
+    /* Header */
+    header { background: var(--white); box-shadow: var(--shadow); position: sticky; top: 0; z-index: 100; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
+    .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); display: flex; align-items: center; gap: 0.5rem; }
+    .nav-links { display: flex; gap: 2rem; align-items: center; }
+    .nav-links a { font-weight: 500; color: var(--secondary); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--primary); }
+    .mobile-toggle { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--secondary); }
+    
+    /* Hero */
+    .hero { background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%); padding: 7rem 0 6rem; text-align: center; }
+    .hero h1 { font-size: 3.25rem; margin-bottom: 1rem; line-height: 1.2; color: var(--secondary); }
+    .hero p { font-size: 1.25rem; color: var(--gray); margin-bottom: 2.5rem; max-width: 750px; margin-left: auto; margin-right: auto; }
+    
+    /* Services */
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; }
+    .service-card { background: var(--white); padding: 2.5rem 2rem; border-radius: var(--radius); box-shadow: var(--shadow); text-align: center; transition: 0.3s; border: 1px solid #e2e8f0; }
+    .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+    .service-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+    .service-card h3 { margin-bottom: 0.5rem; }
+    
+    /* Why Us */
+    .why-us { background: var(--secondary); color: var(--white); }
+    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2.5rem; text-align: center; }
+    .why-item h3 { margin: 1rem 0 0.5rem; font-size: 1.25rem; }
+    .why-item p { color: #cbd5e1; }
+    
+    /* Testimonials */
+    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+    .testimonial { background: var(--white); padding: 2rem; border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid #e2e8f0; }
+    .stars { color: #f59e0b; margin-bottom: 1rem; font-size: 1.1rem; letter-spacing: 2px; }
+    .testimonial p { font-style: italic; margin-bottom: 1.25rem; color: #334155; }
+    .client { font-weight: 600; color: var(--secondary); }
+    
+    /* Appointment */
+    .appointment { background: #f1f5f9; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; max-width: 800px; margin: 0 auto; }
+    .form-group { display: flex; flex-direction: column; }
+    .form-group.full { grid-column: span 2; }
+    label { margin-bottom: 0.5rem; font-weight: 500; font-size: 0.95rem; }
+    input, select, textarea { padding: 0.875rem; border: 1px solid #cbd5e1; border-radius: var(--radius); font-family: inherit; font-size: 1rem; transition: border 0.2s; }
+    input:focus, select:focus, textarea:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(37,99,235,0.1); }
+    textarea { resize: vertical; min-height: 100px; }
+    
+    /* Footer */
+    footer { background: var(--secondary); color: var(--white); padding: 4rem 0 2rem; text-align: center; }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2.5rem; text-align: left; margin-bottom: 2.5rem; }
+    .footer-col h4 { margin-bottom: 1rem; color: #93c5fd; font-size: 1.1rem; }
+    .footer-col p, .footer-col a { color: #cbd5e1; margin-bottom: 0.6rem; display: block; }
+    .footer-col a:hover { color: #fff; }
+    .copyright { border-top: 1px solid #334155; padding-top: 1.5rem; color: #94a3b8; font-size: 0.9rem; }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .mobile-toggle { display: block; }
+      .nav-links { position: fixed; top: 70px; left: 0; right: 0; background: var(--white); flex-direction: column; padding: 2rem; gap: 1.5rem; transform: translateY(-150%); transition: 0.3s; box-shadow: var(--shadow); z-index: 99; }
+      .nav-links.active { transform: translateY(0); }
+      .hero h1 { font-size: 2.25rem; }
+      .form-grid { grid-template-columns: 1fr; }
+      .form-group.full { grid-column: span 1; }
+      .section { padding: 4rem 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#" class="logo">🦷 SmileBright Dental</a>
+        <button class="mobile-toggle" aria-label="Toggle navigation">☰</button>
+        <div class="nav-links">
+          <a href="#services">Services</a>
+          <a href="#why-us">Why Us</a>
+          <a href="#testimonials">Reviews</a>
+          <a href="#appointment" class="btn">Book Appointment</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Your Smile, Our Passion</h1>
+      <p>Experience gentle, modern dental care in a comfortable environment. From routine checkups to cosmetic transformations, we're here for your healthiest smile.</p>
+      <a href="#appointment" class="btn">Schedule Your Visit</a>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Services</h2>
+        <p>Comprehensive dental care tailored to your needs, using the latest technology and techniques.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🩺</div>
+          <h3>General Dentistry</h3>
+          <p>Routine cleanings, exams, fillings, and preventive care to keep your smile healthy year-round.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">✨</div>
+          <h3>Cosmetic Dentistry</h3>
+          <p>Professional whitening, veneers, and bonding for a brighter, more confident smile.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🦴</div>
+          <h3>Dental Implants</h3>
+          <p>Permanent, natural-looking tooth replacements that restore function and aesthetics.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">😁</div>
+          <h3>Orthodontics</h3>
+          <p>Traditional braces and clear aligners to straighten teeth for teens and adults.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Us -->
+  <section id="why-us" class="section why-us">
+    <div class="container">
+      <div class="section-title">
+        <h2 style="color:white;">Why Choose SmileBright?</h2>
+        <p style="color:#cbd5e1;">We combine clinical expertise with genuine compassion to deliver exceptional dental experiences.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-item">
+          <div style="font-size:2rem;">👨‍⚕️</div>
+          <h3>Expert Dentists</h3>
+          <p>Board-certified professionals with 15+ years of combined clinical experience.</p>
+        </div>
+        <div class="why-item">
+          <div style="font-size:2rem;">🔬</div>
+          <h3>Modern Technology</h3>
+          <p>Digital X-rays, 3D imaging, and laser dentistry for precise, comfortable care.</p>
+        </div>
+        <div class="why-item">
+          <div style="font-size:2rem;">🛋️</div>
+          <h3>Comfort-First Care</h3>
+          <p>Anxiety-free environment with sedation options and personalized treatment plans.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>What Our Patients Say</h2>
+        <p>Join thousands of satisfied patients who trust us with their smiles.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>"I used to dread dental visits, but the team at SmileBright made me feel completely at ease. My teeth have never looked better!"</p>
+          <div class="client">- Sarah M.</div>
+        </div>
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>"Professional, thorough, and genuinely caring. They explained every step of my implant procedure. Highly recommend!"</p>
+          <div class="client">- David R.</div>
+        </div>
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>"Brought my kids here for their first checkup. The staff was amazing with them. We're lifelong patients now!"</p>
+          <div class="client">- Elena T.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Appointment -->
+  <section id="appointment" class="section appointment">
+    <div class="container">
+      <div class="section-title">
+        <h2>Book Your Appointment</h2>
+        <p>Fill out the form below and we'll contact you within 24 hours to confirm your visit.</p>
+      </div>
+      <form class="form-grid" onsubmit="event.preventDefault(); alert('Thank you! We will contact you shortly.');">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" required placeholder="John Doe">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" required placeholder="(555) 123-4567">
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" required placeholder="john@example.com">
+        </div>
+        <div class="form-group">
+          <label for="service">Service Needed</label>
+          <select id="service" required>
+            <option value="">Select a service</option>
+            <option>General Checkup & Cleaning</option>
+            <option>Cosmetic Consultation</option>
+            <option>Dental Implants</option>
+            <option>Orthodontics</option>
+            <option>Emergency Care</option>
+          </select>
+        </div>
+        <div class="form-group full">
+          <label for="message">Additional Notes</label>
+          <textarea id="message" rows="4" placeholder="Any specific concerns or preferred appointment times?"></textarea>
+        </div>
+        <div class="form-group full" style="text-align:center;">
+          <button type="submit" class="btn">Request Appointment</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>SmileBright Dental</h4>
+          <p>Providing exceptional dental care with a gentle touch since 2010.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <p>📍 123 Wellness Blvd, Suite 200</p>
+          <p>📞 <a href="tel:+15559876543">(555) 987-6543</a></p>
+          <p>✉️ <a href="mailto:hello@smilebrightdental.com">hello@smilebrightdental.com</a></p>
+        </div>
+        <div class="footer-col">
+          <h4>Office Hours</h4>
+          <p>Mon - Fri: 8:00 AM - 6:00 PM</p>
+          <p>Saturday: 9:00 AM - 2:00 PM</p>
+          <p>Sunday: Closed</p>
+        </div>
+      </div>
+      <div class="copyright">
+        © 2026 SmileBright Dental Clinic. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const toggle = document.querySelector('.mobile-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => navLinks.classList.toggle('active'));
+
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('active'));
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  </script>
+</body>
+</html>
