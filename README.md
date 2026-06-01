@@ -1,1 +1,1 @@
-# Dental-clinic
+# SereneSmile Dental
