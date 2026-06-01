@@ -1,364 +1,520 @@
 <!DOCTYPE html>
-
-<html class="scroll-smooth" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>About Us | SereneSmile Dental</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "on-primary-fixed-variant": "#2b4770",
-                    "inverse-surface": "#213145",
-                    "on-background": "#0b1c30",
-                    "surface-container": "#e5eeff",
-                    "tertiary-fixed": "#dbe4e5",
-                    "primary": "#001a38",
-                    "on-secondary-fixed": "#002020",
-                    "surface-container-low": "#eff4ff",
-                    "on-tertiary-container": "#8f9899",
-                    "primary-container": "#0e2f56",
-                    "on-secondary-fixed-variant": "#004f50",
-                    "on-surface": "#0b1c30",
-                    "on-primary-fixed": "#001c3b",
-                    "surface-tint": "#435f89",
-                    "secondary-container": "#88f1f0",
-                    "secondary-fixed": "#8bf3f3",
-                    "on-surface-variant": "#43474e",
-                    "on-secondary": "#ffffff",
-                    "outline": "#74777f",
-                    "on-primary-container": "#7c97c4",
-                    "surface-bright": "#f8f9ff",
-                    "tertiary-fixed-dim": "#bfc8c9",
-                    "inverse-on-surface": "#eaf1ff",
-                    "error": "#ba1a1a",
-                    "surface": "#f8f9ff",
-                    "primary-fixed": "#d5e3ff",
-                    "on-secondary-container": "#006e6e",
-                    "outline-variant": "#c4c6cf",
-                    "on-primary": "#ffffff",
-                    "surface-container-highest": "#d3e4fe",
-                    "surface-container-lowest": "#ffffff",
-                    "surface-dim": "#cbdbf5",
-                    "error-container": "#ffdad6",
-                    "surface-variant": "#d3e4fe",
-                    "tertiary-container": "#283031",
-                    "primary-fixed-dim": "#acc8f7",
-                    "surface-container-high": "#dce9ff",
-                    "tertiary": "#131b1c",
-                    "secondary-fixed-dim": "#6ed7d7",
-                    "background": "#f8f9ff",
-                    "secondary": "#006a6a",
-                    "on-error": "#ffffff",
-                    "inverse-primary": "#acc8f7",
-                    "on-error-container": "#93000a",
-                    "on-tertiary-fixed": "#151d1e",
-                    "on-tertiary": "#ffffff",
-                    "on-tertiary-fixed-variant": "#404849"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
-            },
-            "spacing": {
-                    "sm": "12px",
-                    "base": "8px",
-                    "container-max": "1200px",
-                    "xs": "4px",
-                    "gutter": "24px",
-                    "md": "24px",
-                    "lg": "48px",
-                    "xl": "80px"
-            },
-            "fontFamily": {
-                    "headline-md": ["Plus Jakarta Sans"],
-                    "display-lg-mobile": ["Plus Jakarta Sans"],
-                    "headline-md-mobile": ["Plus Jakarta Sans"],
-                    "body-md": ["Inter"],
-                    "display-lg": ["Plus Jakarta Sans"],
-                    "title-lg": ["Plus Jakarta Sans"],
-                    "label-md": ["Inter"],
-                    "caption": ["Inter"],
-                    "body-lg": ["Inter"]
-            },
-            "fontSize": {
-                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
-                    "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                    "headline-md-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
-                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
-                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                    "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
-                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
-                    "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
-                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
-            }
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  
+  <!-- GitHub Pages: Base path for proper routing -->
+  <base href="/">
+  
+  <!-- SEO Meta Tags -->
+  <title>About Us | SereneSmile Dental</title>
+  <meta name="description" content="Meet the expert team at SereneSmile Dental. We combine clinical excellence with compassionate, spa-like care for your healthiest smile."/>
+  <meta name="theme-color" content="#001a38"/>
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="About Us | SereneSmile Dental"/>
+  <meta property="og:description" content="Expert dental care with empathy. Meet our specialists and explore our serene clinic."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://YOUR_USERNAME.github.io/your-repo-name/about"/>
+  <meta property="og:image" content="https://lh3.googleusercontent.com/aida-public/AB6AXuBoI-eFp-ui9K74cNnphiDZlUSui95X_BGjGr1C8_DRPbDUaL2NLkZv40bx5LzPjNjcw735iJkImUFqjmH_02avBSwjNGjr1b5HC6mSyn9UmLpXvugazNykcfFhO8vdZbl7a_erVRyVzDSBe-or2dHivaoY4m7a4XQQJtvEaW4F2TcsitIlM6eky-KRcF0SQIJIr4tGWIajaKcR5h_lzz62L3YsIZGl5DitBnu2Tfz2F5pdZBhwujpO3kuynjwZL3lGmkbRpOMjbo4"/>
+  
+  <!-- Favicon (inline SVG - no external request) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🦷%3C/text%3E%3C/svg%3E"/>
+  
+  <!-- Preconnect to CDNs for performance -->
+  <link rel="preconnect" href="https://cdn.tailwindcss.com"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  
+  <!-- External Resources (CDN-based for static hosting) -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  
+  <!-- Tailwind Config -->
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-primary-fixed-variant": "#2b4770",
+            "inverse-surface": "#213145",
+            "on-background": "#0b1c30",
+            "surface-container": "#e5eeff",
+            "tertiary-fixed": "#dbe4e5",
+            "primary": "#001a38",
+            "on-secondary-fixed": "#002020",
+            "surface-container-low": "#eff4ff",
+            "on-tertiary-container": "#8f9899",
+            "primary-container": "#0e2f56",
+            "on-secondary-fixed-variant": "#004f50",
+            "on-surface": "#0b1c30",
+            "on-primary-fixed": "#001c3b",
+            "surface-tint": "#435f89",
+            "secondary-container": "#88f1f0",
+            "secondary-fixed": "#8bf3f3",
+            "on-surface-variant": "#43474e",
+            "on-secondary": "#ffffff",
+            "outline": "#74777f",
+            "on-primary-container": "#7c97c4",
+            "surface-bright": "#f8f9ff",
+            "tertiary-fixed-dim": "#bfc8c9",
+            "inverse-on-surface": "#eaf1ff",
+            "error": "#ba1a1a",
+            "surface": "#f8f9ff",
+            "primary-fixed": "#d5e3ff",
+            "on-secondary-container": "#006e6e",
+            "outline-variant": "#c4c6cf",
+            "on-primary": "#ffffff",
+            "surface-container-highest": "#d3e4fe",
+            "surface-container-lowest": "#ffffff",
+            "surface-dim": "#cbdbf5",
+            "error-container": "#ffdad6",
+            "surface-variant": "#d3e4fe",
+            "tertiary-container": "#283031",
+            "primary-fixed-dim": "#acc8f7",
+            "surface-container-high": "#dce9ff",
+            "tertiary": "#131b1c",
+            "secondary-fixed-dim": "#6ed7d7",
+            "background": "#f8f9ff",
+            "secondary": "#006a6a",
+            "on-error": "#ffffff",
+            "inverse-primary": "#acc8f7",
+            "on-error-container": "#93000a",
+            "on-tertiary-fixed": "#151d1e",
+            "on-tertiary": "#ffffff",
+            "on-tertiary-fixed-variant": "#404849"
           },
-        },
+          borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+          spacing: { sm: "12px", base: "8px", "container-max": "1200px", xs: "4px", gutter: "24px", md: "24px", lg: "48px", xl: "80px" },
+          fontFamily: {
+            "headline-md": ["Plus Jakarta Sans"],
+            "display-lg-mobile": ["Plus Jakarta Sans"],
+            "headline-md-mobile": ["Plus Jakarta Sans"],
+            "body-md": ["Inter"],
+            "display-lg": ["Plus Jakarta Sans"],
+            "title-lg": ["Plus Jakarta Sans"],
+            "label-md": ["Inter"],
+            "caption": ["Inter"],
+            "body-lg": ["Inter"]
+          },
+          fontSize: {
+            "headline-md": ["32px", {lineHeight: "40px", fontWeight: "600"}],
+            "display-lg-mobile": ["32px", {lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700"}],
+            "headline-md-mobile": ["24px", {lineHeight: "32px", fontWeight: "600"}],
+            "body-md": ["16px", {lineHeight: "24px", fontWeight: "400"}],
+            "display-lg": ["48px", {lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700"}],
+            "title-lg": ["20px", {lineHeight: "28px", fontWeight: "600"}],
+            "label-md": ["14px", {lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "500"}],
+            "caption": ["12px", {lineHeight: "16px", fontWeight: "400"}],
+            "body-lg": ["18px", {lineHeight: "28px", fontWeight: "400"}]
+          }
+        }
       }
-    </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-        .bento-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(2, 300px);
-            gap: 24px;
-        }
-        @media (max-width: 768px) {
-            .bento-grid {
-                grid-template-columns: 1fr;
-                grid-template-rows: auto;
-            }
-        }
-    </style>
+    }
+  </script>
+  
+  <style>
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    .glass-card { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.3); }
+    .bento-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(2, 300px); gap: 24px; }
+    @media (max-width: 768px) { .bento-grid { grid-template-columns: 1fr; grid-template-rows: auto; } }
+    
+    /* Accessibility: Reduce motion preference */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+    }
+    
+    /* Scroll reveal animation base states */
+    .reveal-on-scroll { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal-on-scroll.is-visible { opacity: 1; transform: translateY(0); }
+  </style>
+  
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "SereneSmile Dental",
+    "url": "https://YOUR_USERNAME.github.io/your-repo-name",
+    "logo": "https://example.com/logo.png",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBoI-eFp-ui9K74cNnphiDZlUSui95X_BGjGr1C8_DRPbDUaL2NLkZv40bx5LzPjNjcw735iJkImUFqjmH_02avBSwjNGjr1b5HC6mSyn9UmLpXvugazNykcfFhO8vdZbl7a_erVRyVzDSBe-or2dHivaoY4m7a4XQQJtvEaW4F2TcsitIlM6eky-KRcF0SQIJIr4tGWIajaKcR5h_lzz62L3YsIZGl5DitBnu2Tfz2F5pdZBhwujpO3kuynjwZL3lGmkbRpOMjbo4",
+    "telephone": "+1-555-SERENE-0",
+    "address": { "@type": "PostalAddress", "streetAddress": "123 Serenity Blvd", "addressLocality": "Health City", "addressCountry": "US" },
+    "priceRange": "$$",
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "14:00" }
+    ]
+  }
+  </script>
 </head>
+
 <body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
-<!-- TopNavBar -->
-<header class="bg-surface-container-lowest dark:bg-on-background shadow-sm docked full-width top-0 sticky z-50">
-<nav class="flex justify-between items-center h-20 px-gutter max-w-container-max mx-auto">
-<div class="font-headline-md text-title-lg tracking-tight text-primary dark:text-primary-fixed-dim">
-                SereneSmile Dental
+  <!-- Skip to content link for accessibility -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:bg-primary focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:z-50">
+    Skip to main content
+  </a>
+
+  <!-- Top Navigation -->
+  <header class="bg-surface-container-lowest dark:bg-on-background shadow-sm sticky top-0 z-50">
+    <nav class="flex justify-between items-center h-20 px-gutter max-w-container-max mx-auto" aria-label="Main navigation">
+      <a href="/" class="font-headline-md text-title-lg tracking-tight text-primary dark:text-primary-fixed-dim" aria-label="SereneSmile Dental Home">
+        SereneSmile Dental
+      </a>
+      
+      <div class="hidden md:flex items-center gap-lg">
+        <a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md" href="/">Home</a>
+        <a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md" href="/services">Services</a>
+        <a class="text-secondary dark:text-secondary-fixed font-semibold border-b-2 border-secondary dark:border-secondary-fixed pb-1 font-body-md text-body-md" href="/about" aria-current="page">About Us</a>
+        <a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md" href="/patients">Patients</a>
+      </div>
+      
+      <a href="/appointment" class="bg-secondary text-on-secondary px-6 py-3 rounded-full font-label-md text-label-md hover:opacity-90 transition-all scale-95 active:scale-90">
+        Book Appointment
+      </a>
+      
+      <!-- Mobile menu button (optional enhancement) -->
+      <button class="md:hidden p-2 text-on-surface" aria-label="Toggle menu" aria-expanded="false">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="relative py-xl md:py-[120px] overflow-hidden" aria-labelledby="hero-title">
+      <div class="max-w-container-max mx-auto px-gutter relative z-10">
+        <div class="max-w-2xl reveal-on-scroll">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md mb-base uppercase tracking-wider">Our Legacy</span>
+          <h1 id="hero-title" class="font-display-lg text-display-lg md:text-display-lg text-primary mb-md">Gentle Care, Bright Smiles</h1>
+          <p class="font-body-lg text-body-lg text-on-surface-variant mb-lg leading-relaxed">
+            At SereneSmile Dental, we've redefined the clinical experience. We bridge medical precision with spa-like relaxation to ensure your journey to a healthier smile is as peaceful as the result.
+          </p>
+        </div>
+      </div>
+      <!-- Decorative Element -->
+      <div class="absolute top-0 right-0 w-1/2 h-full bg-surface-container-low -z-0 rounded-l-[100px] hidden lg:block">
+        <img 
+          alt="Modern Dental Clinic interior - serene, minimalist reception area with soft lighting" 
+          class="w-full h-full object-cover rounded-l-[100px] opacity-80" 
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoI-eFp-ui9K74cNnphiDZlUSui95X_BGjGr1C8_DRPbDUaL2NLkZv40bx5LzPjNjcw735iJkImUFqjmH_02avBSwjNGjr1b5HC6mSyn9UmLpXvugazNykcfFhO8vdZbl7a_erVRyVzDSBe-or2dHivaoY4m7a4XQQJtvEaW4F2TcsitIlM6eky-KRcF0SQIJIr4tGWIajaKcR5h_lzz62L3YsIZGl5DitBnu2Tfz2F5pdZBhwujpO3kuynjwZL3lGmkbRpOMjbo4"
+          loading="lazy"
+          width="800"
+          height="600"
+        />
+      </div>
+    </section>
+
+    <!-- Mission & Values -->
+    <section class="py-xl bg-surface-container-lowest" aria-labelledby="values-title">
+      <div class="max-w-container-max mx-auto px-gutter">
+        <h2 id="values-title" class="sr-only">Our Core Values</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+          <article class="space-y-base p-md rounded-xl hover:bg-surface-container-low transition-all duration-300 reveal-on-scroll">
+            <span class="material-symbols-outlined text-secondary text-[40px]" aria-hidden="true">clinical_notes</span>
+            <h3 class="font-headline-md text-title-lg text-primary">Clinical Excellence</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">We utilize the latest Swiss-engineered technology and evidence-based practices to provide the highest standard of dental care.</p>
+          </article>
+          <article class="space-y-base p-md rounded-xl hover:bg-surface-container-low transition-all duration-300 reveal-on-scroll">
+            <span class="material-symbols-outlined text-secondary text-[40px]" aria-hidden="true">psychology</span>
+            <h3 class="font-headline-md text-title-lg text-primary">Patient Empathy</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">Understanding 'dentist anxiety' is at our core. Our team is trained in gentle-touch techniques and patient-first communication.</p>
+          </article>
+          <article class="space-y-base p-md rounded-xl hover:bg-surface-container-low transition-all duration-300 reveal-on-scroll">
+            <span class="material-symbols-outlined text-secondary text-[40px]" aria-hidden="true">eco</span>
+            <h3 class="font-headline-md text-title-lg text-primary">Sustainable Health</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">We focus on preventative treatments that promote lifelong oral health, minimizing the need for invasive future procedures.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Meet the Team -->
+    <section class="py-xl" aria-labelledby="team-title">
+      <div class="max-w-container-max mx-auto px-gutter">
+        <div class="text-center mb-xl reveal-on-scroll">
+          <h2 id="team-title" class="font-headline-md text-headline-md text-primary mb-sm">Expertise You Can Trust</h2>
+          <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Our specialists bring decades of combined experience from the world's leading dental institutions.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-md">
+          <!-- Team Member 1 -->
+          <article class="group relative overflow-hidden rounded-xl bg-surface-container shadow-sm hover:shadow-md transition-shadow reveal-on-scroll">
+            <div class="aspect-[4/5] overflow-hidden">
+              <img 
+                alt="Dr. Elena Rossi - Lead Orthodontist, warm professional portrait" 
+                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-110" 
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3GMwojuzgLp74hm-PAFJz3msMLLUTZJJzOv3j8Me_3LKBtINBkQEBNzuKdfDAYT5t7JF6cBfKtS2nuziPwWt1jTqjnmky8SVKr5qN1Kze_PyvIJL6yOAzYZDSSFsW2IsWutYU6u7WlP03SsTGJ2Yn5iNbErkgV31hMdI93u14OZNzFDc2QEcvYlD-8X22QWk3cgdXMrqlW0D-Vkfsnh3snNDfKMDpAD9YMTCfVUuqOKv_HoUbMSVQqCEHvY_IbrPKLHoWDfTshOs"
+                loading="lazy"
+                width="400"
+                height="500"
+              />
             </div>
-<div class="hidden md:flex items-center gap-lg">
-<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md" href="#">Home</a>
-<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md" href="#">Services</a>
-<a class="text-secondary dark:text-secondary-fixed font-semibold border-b-2 border-secondary dark:border-secondary-fixed pb-1 font-body-md text-body-md" href="#">About Us</a>
-<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md" href="#">Patients</a>
-</div>
-<button class="bg-secondary text-on-secondary px-6 py-3 rounded-full font-label-md text-label-md hover:opacity-90 transition-all scale-95 active:scale-90">
-                Book Appointment
-            </button>
-</nav>
-</header>
-<main>
-<!-- Hero Section -->
-<section class="relative py-xl md:py-[120px] overflow-hidden">
-<div class="max-w-container-max mx-auto px-gutter relative z-10">
-<div class="max-w-2xl">
-<span class="inline-block px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md mb-base uppercase tracking-wider">Our Legacy</span>
-<h1 class="font-display-lg text-display-lg md:text-display-lg text-primary mb-md">Gentle Care, Bright Smiles</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg leading-relaxed">
-                        At SereneSmile Dental, we've redefined the clinical experience. We bridge medical precision with spa-like relaxation to ensure your journey to a healthier smile is as peaceful as the result.
-                    </p>
-</div>
-</div>
-<!-- Decorative Element -->
-<div class="absolute top-0 right-0 w-1/2 h-full bg-surface-container-low -z-0 rounded-l-[100px] hidden lg:block">
-<img alt="Modern Dental Clinic" class="w-full h-full object-cover rounded-l-[100px] opacity-80" data-alt="A wide-angle photograph of a premium, modern dental clinic interior featuring a minimalist reception area. The design uses a soft color palette of whites and tertiary blues, with sleek curved architectural elements and warm, diffused overhead lighting. The atmosphere is quiet, serene, and professional, avoiding any intimidating medical equipment in view." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoI-eFp-ui9K74cNnphiDZlUSui95X_BGjGr1C8_DRPbDUaL2NLkZv40bx5LzPjNjcw735iJkImUFqjmH_02avBSwjNGjr1b5HC6mSyn9UmLpXvugazNykcfFhO8vdZbl7a_erVRyVzDSBe-or2dHivaoY4m7a4XQQJtvEaW4F2TcsitIlM6eky-KRcF0SQIJIr4tGWIajaKcR5h_lzz62L3YsIZGl5DitBnu2Tfz2F5pdZBhwujpO3kuynjwZL3lGmkbRpOMjbo4"/>
-</div>
-</section>
-<!-- Mission & Values -->
-<section class="py-xl bg-surface-container-lowest">
-<div class="max-w-container-max mx-auto px-gutter">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
-<div class="space-y-base p-md rounded-xl hover:bg-surface-container-low transition-all duration-300">
-<span class="material-symbols-outlined text-secondary text-[40px]" data-icon="clinical_notes">clinical_notes</span>
-<h3 class="font-headline-md text-title-lg text-primary">Clinical Excellence</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">We utilize the latest Swiss-engineered technology and evidence-based practices to provide the highest standard of dental care.</p>
-</div>
-<div class="space-y-base p-md rounded-xl hover:bg-surface-container-low transition-all duration-300">
-<span class="material-symbols-outlined text-secondary text-[40px]" data-icon="psychology">psychology</span>
-<h3 class="font-headline-md text-title-lg text-primary">Patient Empathy</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Understanding 'dentist anxiety' is at our core. Our team is trained in gentle-touch techniques and patient-first communication.</p>
-</div>
-<div class="space-y-base p-md rounded-xl hover:bg-surface-container-low transition-all duration-300">
-<span class="material-symbols-outlined text-secondary text-[40px]" data-icon="eco">eco</span>
-<h3 class="font-headline-md text-title-lg text-primary">Sustainable Health</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">We focus on preventative treatments that promote lifelong oral health, minimizing the need for invasive future procedures.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Meet the Team -->
-<section class="py-xl">
-<div class="max-w-container-max mx-auto px-gutter">
-<div class="text-center mb-xl">
-<h2 class="font-headline-md text-headline-md text-primary mb-sm">Expertise You Can Trust</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Our specialists bring decades of combined experience from the world's leading dental institutions.</p>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-md">
-<!-- Dr 1 -->
-<div class="group relative overflow-hidden rounded-xl bg-surface-container shadow-sm hover:shadow-md transition-shadow">
-<div class="aspect-[4/5] overflow-hidden">
-<img alt="Dr. Elena Rossi" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-110" data-alt="A professional portrait of a female dentist in her early 40s wearing white clinical scrubs. She has a warm, confident smile and is standing in a bright, modern clinic hallway with soft blue architectural accents. The lighting is high-key and flattering, emphasizing a clean and trustworthy medical professional aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3GMwojuzgLp74hm-PAFJz3msMLLUTZJJzOv3j8Me_3LKBtINBkQEBNzuKdfDAYT5t7JF6cBfKtS2nuziPwWt1jTqjnmky8SVKr5qN1Kze_PyvIJL6yOAzYZDSSFsW2IsWutYU6u7WlP03SsTGJ2Yn5iNbErkgV31hMdI93u14OZNzFDc2QEcvYlD-8X22QWk3cgdXMrqlW0D-Vkfsnh3snNDfKMDpAD9YMTCfVUuqOKv_HoUbMSVQqCEHvY_IbrPKLHoWDfTshOs"/>
-</div>
-<div class="p-md bg-surface-container-lowest">
-<h4 class="font-title-lg text-title-lg text-primary">Dr. Elena Rossi</h4>
-<p class="font-label-md text-label-md text-secondary uppercase tracking-tight">Lead Orthodontist</p>
-</div>
-</div>
-<!-- Dr 2 -->
-<div class="group relative overflow-hidden rounded-xl bg-surface-container shadow-sm hover:shadow-md transition-shadow">
-<div class="aspect-[4/5] overflow-hidden">
-<img alt="Dr. Marcus Thorne" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-110" data-alt="A professional close-up of a male dentist in his late 30s with short hair and glasses, wearing a dark navy clinical uniform. He is looking at the camera with an approachable and calm expression. The background is a softly blurred modern dental operatory with teal and white color tones, suggesting a high-tech yet serene clinical environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdzoezgWbV4aB7I0Hb2hU9wgLFD_DcFGGl0WskOwEHZolyGFGli-h3tnszxRY2lQeB0OwSiEtRWnazUsAMGd1S_k3zaP03McFSxL6n5s5_BLjVt6xUH8sCLhocpBBuVeBM2yJbz3VyIEPYbQrWd9yS528OBJ4kM1VDwK0CIhxpxHKC_7HuQLKNQNvmTXsc2DYU8dTukjksif0JzEuIAmCYbCF5V4rdcw9WzAFplsrjM7hKfYEB1-B4Iebm0m3kKzxAU7BhkLVjdFk"/>
-</div>
-<div class="p-md bg-surface-container-lowest">
-<h4 class="font-title-lg text-title-lg text-primary">Dr. Marcus Thorne</h4>
-<p class="font-label-md text-label-md text-secondary uppercase tracking-tight">Cosmetic Specialist</p>
-</div>
-</div>
-<!-- Dr 3 -->
-<div class="group relative overflow-hidden rounded-xl bg-surface-container shadow-sm hover:shadow-md transition-shadow">
-<div class="aspect-[4/5] overflow-hidden">
-<img alt="Dr. Sarah Chen" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-110" data-alt="A medium shot of a female dental professional of Asian descent, wearing professional clinical attire. She is smiling gently, projecting warmth and empathy. The setting is a bright dental clinic with soft, natural light coming from a large window. The color palette is composed of clean whites, soft grays, and subtle navy blue accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCq8Y13U49m8loL4j6RcGvqR4rXJOsoGGhuPqVugu5OMqHHRkeKFZCwnulMy5vGe_4MrmzwGRgYPUjCTMc8KJ3pd4lMzQhCETinQ0zsvSnto4xwIF9bG1YGRJANXlPunkFAzEKR2W6FFCMO-9jvg-iNgUogpBEroeAS70I8TCNiI4RotcHrV-7DuffmADMBqEfbBQNHtBIvZdX_n6gY0dSC07N61xFuJ7-vv9O8J20k1aiOP6T4drZ1y1R4Hsy1CHHDyT3BQQkVpGc"/>
-</div>
-<div class="p-md bg-surface-container-lowest">
-<h4 class="font-title-lg text-title-lg text-primary">Dr. Sarah Chen</h4>
-<p class="font-label-md text-label-md text-secondary uppercase tracking-tight">Pediatric Dentist</p>
-</div>
-</div>
-<!-- Dr 4 -->
-<div class="group relative overflow-hidden rounded-xl bg-surface-container shadow-sm hover:shadow-md transition-shadow">
-<div class="aspect-[4/5] overflow-hidden">
-<img alt="Dr. Julian Vane" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-110" data-alt="A portrait of a senior male dentist with graying hair, wearing a white coat and stethoscope around his neck. He has a kind, experienced expression. He is standing in front of a wall featuring the clinic's logo on a frosted glass surface. The lighting is soft and even, highlighting a sense of seasoned expertise and clinical safety." src="https://lh3.googleusercontent.com/aida-public/AB6AXuASmvv7IRHx4kWCQ2X8XiPw2LEwpp3zngYkCDNz-6vRPCLqMxguAy9Z7Wc-DYk8hWMvLg38ErnTaay_UZgcRPijEUkH6WXOGm1TljpmHibMiTIhNLDiNA9KEb3Z0V8KOLMId8TXPsu8CjasHPdQRogsc-KB6AKtDIzcrs_PPnNeTwJt3Uw-FL4_8e36vkp9_ljBx1lC7KnjeCYLNILKsXkm3OBy9kR1UkpSxPNBY6hXmEZTIiMkf92_gTJJnp4ywYoTsUk2NLnkLhY"/>
-</div>
-<div class="p-md bg-surface-container-lowest">
-<h4 class="font-title-lg text-title-lg text-primary">Dr. Julian Vane</h4>
-<p class="font-label-md text-label-md text-secondary uppercase tracking-tight">Implant Surgeon</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Gallery / Environment (Bento) -->
-<section class="py-xl bg-surface-container-low">
-<div class="max-w-container-max mx-auto px-gutter">
-<div class="flex flex-col md:flex-row justify-between items-end mb-xl gap-md">
-<div class="max-w-xl">
-<h2 class="font-headline-md text-headline-md text-primary mb-sm">A Sanctuary of Science</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant">Explore our modern facilities designed with your comfort and safety as our top priority.</p>
-</div>
-</div>
-<div class="bento-grid">
-<div class="md:col-span-2 md:row-span-2 rounded-xl overflow-hidden relative group">
-<img alt="Luxury Waiting Room" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A luxurious, modern waiting room in a dental clinic featuring ergonomic designer chairs in a soft navy fabric. The room has high ceilings, a wall of floor-to-ceiling windows letting in soft daylight, and minimalist white shelving with art books. The floor is polished concrete with a plush area rug, creating a high-end spa-like atmosphere in white and navy tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcyKdhQ9Dr8z2G-UyaJOD8snP88Cni0iJ1Fsfy1vrDWRKObBD3A-XZcqrJ_L-7IsnMQPmrjcuXo-BrsbVZ4uNkd9yWL_1-SLoh_EUcqZPBkA-BdjhXmYmrTNdNZixq0T3QjLZEnBPdZtbqxt_2THR_feOkKnM_ADFUl0LixqLdWlBstYjr_ut_kh-F2iqnb5Bx1ufEVAlbGfoSqLzt0JooTQ3_EI63gJubfhEbawhz3qZ9CGkumDXvAoQYWFbuC8G2Z7_CAlTdFxg"/>
-<div class="absolute bottom-0 left-0 right-0 p-lg bg-gradient-to-t from-primary/80 to-transparent">
-<p class="text-white font-title-lg text-title-lg">The Relaxation Lounge</p>
-</div>
-</div>
-<div class="rounded-xl overflow-hidden relative group">
-<img alt="Dental Technology" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close-up of cutting-edge dental technology in a clean, brightly lit treatment room. A sleek white dental chair is partially visible alongside a high-resolution digital display showing 3D dental scans. The lighting is cool and clinical but soft, with accents of teal from status LEDs on the equipment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTNLQNdYsndcqwrjCHzGSj8hivaJmXIPZbG1gNyFBVNqcNFgd7zomqRWTFi8bBFxH4YrnzFY4MYnGSoNwK-btqjCFaV27X-Tuv75Tjqw3RAHqCUE_BJ5q5RW-rb9aXOlEv1kjrbhGepRyvh8QclN3s6HQDwUgPCquYHqonq9dkxWyF70cEeTmLzdRQTxdpYdSQRmHeeTqfTW-dynCEHTfUJ-65Q5z4wGkZIvTSdaxw2N3zDcF1zyTR1NBSlM2jL7QVbhcsGWOX00A"/>
-<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-<span class="text-white font-label-md text-label-md bg-secondary/80 px-4 py-2 rounded-full">Digital Diagnostics</span>
-</div>
-</div>
-<div class="rounded-xl overflow-hidden relative group">
-<img alt="Clean Operatory" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="An ultra-clean, sterile dental operatory featuring a minimalist white chair and sleek, integrated cabinetry. The room is flooded with natural light, and the walls are a very soft slate blue. There is a sense of absolute hygiene and calm precision. A single green plant adds a touch of nature to the corner of the frame." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDn9rE4hkmdvPUnSaKgwxDaQVIeKMCtS6r3FB4UwwGcIWM-pU3oUO9PNfX1sVsOJT8asRNZ2KPLZF1FDdGBKyMPWdPk0-tRLgjA54YUtzkqRxZkwuLrr_3MCUdNcvs5iSNw8wLeRVdqI8sMMdftDf8qIVfWfFAlNhWxa2_ruH2nucObP0hC87PMheP2sadAZBgRIM5IzIYexx8hVCz-BDNR6mzvqd-5gurrAFzf9-LunGCTGehTNixx2oLj4BBkmMgt13RTewOFOzo"/>
-</div>
-<div class="md:col-span-2 rounded-xl overflow-hidden relative group">
-<img alt="Lab Precision" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A focused shot of a dental laboratory technician's workspace, showing high-end dental ceramics and precision tools arranged neatly on a white surface. The background is a soft-focus laboratory setting with bright, even lighting that emphasizes detail and cleanliness. The palette is dominated by whites, grays, and clinical navy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAvxaz9u82iHnno-IlqLfwh-2bP09ibR0bzrqKKKJjunWFEHff7ZPbk6zk7rnEFb9Grb-u-d41ez4E7sgxBgwz2bIs_CAxyC_RVzRGFvf-rPQuHz4yFc0vLVlLcyM4gr2dZhlWsJ6T-KO86qsByJXNgk-B1oCrO-0ca1gitZyO4FsLE0gP-hoRt0sYiPFcPFfAONove55Esp955TNeYsF6Kz46VBfs-Qju7EnIcVxsHPscojeTq4LVrqRPfaf44BCOGc4s-5W9y_s"/>
-<div class="absolute bottom-0 right-0 p-md">
-<div class="glass-card px-4 py-2 rounded-lg">
-<p class="text-primary font-label-md text-label-md font-bold">In-House Lab Excellence</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- CTA Section -->
-<section class="py-xl">
-<div class="max-w-container-max mx-auto px-gutter">
-<div class="bg-primary rounded-3xl p-lg md:p-xl flex flex-col md:flex-row items-center justify-between gap-lg relative overflow-hidden">
-<!-- Background Glows -->
-<div class="absolute -top-24 -left-24 w-64 h-64 bg-secondary/20 rounded-full blur-3xl"></div>
-<div class="absolute -bottom-24 -right-24 w-64 h-64 bg-secondary-container/10 rounded-full blur-3xl"></div>
-<div class="relative z-10 text-center md:text-left">
-<h2 class="font-display-lg text-headline-md text-white mb-sm">Ready to begin your journey?</h2>
-<p class="font-body-lg text-body-lg text-primary-fixed max-w-lg">Join the SereneSmile family today and experience dental care as it should be.</p>
-</div>
-<div class="relative z-10 flex flex-col sm:flex-row gap-md w-full md:w-auto">
-<button class="bg-secondary text-on-secondary px-8 py-4 rounded-full font-label-md text-label-md hover:bg-secondary-fixed transition-all shadow-lg active:scale-95">Book Online</button>
-<button class="border border-outline-variant text-white px-8 py-4 rounded-full font-label-md text-label-md hover:bg-white/10 transition-all active:scale-95">View Pricing</button>
-</div>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="bg-surface-container dark:bg-inverse-surface border-t border-outline-variant w-full py-xl">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-lg px-gutter max-w-container-max mx-auto">
-<div class="space-y-md">
-<div class="font-headline-md text-headline-md-mobile text-primary dark:text-primary-fixed">SereneSmile</div>
-<p class="text-on-surface-variant dark:text-outline-variant font-body-md text-body-md">Redefining dental wellness through empathy and advanced technology.</p>
-</div>
-<div>
-<h4 class="font-title-lg text-primary mb-md">Quick Links</h4>
-<ul class="space-y-base">
-<li><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-label-md text-label-md" href="#">About Us</a></li>
-<li><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-label-md text-label-md" href="#">Services</a></li>
-<li><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-label-md text-label-md" href="#">Patient Portal</a></li>
-<li><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-label-md text-label-md" href="#">Insurance</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-title-lg text-primary mb-md">Contact</h4>
-<ul class="space-y-base">
-<li class="flex items-center gap-base text-on-surface-variant dark:text-outline-variant">
-<span class="material-symbols-outlined text-secondary" data-icon="location_on">location_on</span>
-<span class="font-body-md text-body-md">123 Serenity Blvd, Health City</span>
-</li>
-<li class="flex items-center gap-base text-on-surface-variant dark:text-outline-variant">
-<span class="material-symbols-outlined text-secondary" data-icon="call">call</span>
-<span class="font-body-md text-body-md">+1 (555) SERENE-0</span>
-</li>
-<li class="flex items-center gap-base text-on-surface-variant dark:text-outline-variant">
-<span class="material-symbols-outlined text-secondary" data-icon="mail">mail</span>
-<span class="font-body-md text-body-md">hello@serenesmile.com</span>
-</li>
-</ul>
-</div>
-<div>
-<h4 class="font-title-lg text-primary mb-md">Newsletter</h4>
-<p class="text-on-surface-variant dark:text-outline-variant mb-md font-body-md text-body-md">Monthly health tips and clinic updates.</p>
-<form class="flex flex-col gap-base">
-<input class="bg-surface border border-outline-variant rounded-lg p-3 text-body-md focus:border-secondary focus:ring-1 focus:ring-secondary transition-all outline-none" placeholder="Email address" type="email"/>
-<button class="bg-primary text-white p-3 rounded-lg font-label-md hover:opacity-90">Subscribe</button>
-</form>
-</div>
-</div>
-<div class="max-w-container-max mx-auto px-gutter mt-xl pt-lg border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-md">
-<p class="text-on-surface-variant dark:text-outline-variant font-label-md text-label-md">© 2024 SereneSmile Dental Clinic. All rights reserved.</p>
-<div class="flex gap-lg">
-<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Privacy Policy</a>
-<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Terms of Service</a>
-<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Emergency Care</a>
-</div>
-</div>
-</footer>
-<script>
-        // Simple micro-interaction for scroll reveals
-        const observerOptions = {
-            threshold: 0.1
-        };
+            <div class="p-md bg-surface-container-lowest">
+              <h4 class="font-title-lg text-title-lg text-primary">Dr. Elena Rossi</h4>
+              <p class="font-label-md text-label-md text-secondary uppercase tracking-tight">Lead Orthodontist</p>
+            </div>
+          </article>
+          
+          <!-- Team Member 2 -->
+          <article class="group relative overflow-hidden rounded-xl bg-surface-container shadow-sm hover:shadow-md transition-shadow reveal-on-scroll">
+            <div class="aspect-[4/5] overflow-hidden">
+              <img 
+                alt="Dr. Marcus Thorne - Cosmetic Specialist, approachable professional portrait" 
+                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-110" 
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdzoezgWbV4aB7I0Hb2hU9wgLFD_DcFGGl0WskOwEHZolyGFGli-h3tnszxRY2lQeB0OwSiEtRWnazUsAMGd1S_k3zaP03McFSxL6n5s5_BLjVt6xUH8sCLhocpBBuVeBM2yJbz3VyIEPYbQrWd9yS528OBJ4kM1VDwK0CIhxpxHKC_7HuQLKNQNvmTXsc2DYU8dTukjksif0JzEuIAmCYbCF5V4rdcw9WzAFplsrjM7hKfYEB1-B4Iebm0m3kKzxAU7BhkLVjdFk"
+                loading="lazy"
+                width="400"
+                height="500"
+              />
+            </div>
+            <div class="p-md bg-surface-container-lowest">
+              <h4 class="font-title-lg text-title-lg text-primary">Dr. Marcus Thorne</h4>
+              <p class="font-label-md text-label-md text-secondary uppercase tracking-tight">Cosmetic Specialist</p>
+            </div>
+          </article>
+          
+          <!-- Team Member 3 -->
+          <article class="group relative overflow-hidden rounded-xl bg-surface-container shadow-sm hover:shadow-md transition-shadow reveal-on-scroll">
+            <div class="aspect-[4/5] overflow-hidden">
+              <img 
+                alt="Dr. Sarah Chen - Pediatric Dentist, warm and empathetic portrait" 
+                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-110" 
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCq8Y13U49m8loL4j6RcGvqR4rXJOsoGGhuPqVugu5OMqHHRkeKFZCwnulMy5vGe_4MrmzwGRgYPUjCTMc8KJ3pd4lMzQhCETinQ0zsvSnto4xwIF9bG1YGRJANXlPunkFAzEKR2W6FFCMO-9jvg-iNgUogpBEroeAS70I8TCNiI4RotcHrV-7DuffmADMBqEfbBQNHtBIvZdX_n6gY0dSC07N61xFuJ7-vv9O8J20k1aiOP6T4drZ1y1R4Hsy1CHHDyT3BQQkVpGc"
+                loading="lazy"
+                width="400"
+                height="500"
+              />
+            </div>
+            <div class="p-md bg-surface-container-lowest">
+              <h4 class="font-title-lg text-title-lg text-primary">Dr. Sarah Chen</h4>
+              <p class="font-label-md text-label-md text-secondary uppercase tracking-tight">Pediatric Dentist</p>
+            </div>
+          </article>
+          
+          <!-- Team Member 4 -->
+          <article class="group relative overflow-hidden rounded-xl bg-surface-container shadow-sm hover:shadow-md transition-shadow reveal-on-scroll">
+            <div class="aspect-[4/5] overflow-hidden">
+              <img 
+                alt="Dr. Julian Vane - Implant Surgeon, experienced senior professional portrait" 
+                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-110" 
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuASmvv7IRHx4kWCQ2X8XiPw2LEwpp3zngYkCDNz-6vRPCLqMxguAy9Z7Wc-DYk8hWMvLg38ErnTaay_UZgcRPijEUkH6WXOGm1TljpmHibMiTIhNLDiNA9KEb3Z0V8KOLMId8TXPsu8CjasHPdQRogsc-KB6AKtDIzcrs_PPnNeTwJt3Uw-FL4_8e36vkp9_ljBx1lC7KnjeCYLNILKsXkm3OBy9kR1UkpSxPNBY6hXmEZTIiMkf92_gTJJnp4ywYoTsUk2NLnkLhY"
+                loading="lazy"
+                width="400"
+                height="500"
+              />
+            </div>
+            <div class="p-md bg-surface-container-lowest">
+              <h4 class="font-title-lg text-title-lg text-primary">Dr. Julian Vane</h4>
+              <p class="font-label-md text-label-md text-secondary uppercase tracking-tight">Implant Surgeon</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100', 'translate-y-0');
-                    entry.target.classList.remove('opacity-0', 'translate-y-10');
-                }
-            });
-        }, observerOptions);
+    <!-- Gallery / Environment (Bento) -->
+    <section class="py-xl bg-surface-container-low" aria-labelledby="gallery-title">
+      <div class="max-w-container-max mx-auto px-gutter">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-xl gap-md reveal-on-scroll">
+          <div class="max-w-xl">
+            <h2 id="gallery-title" class="font-headline-md text-headline-md text-primary mb-sm">A Sanctuary of Science</h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant">Explore our modern facilities designed with your comfort and safety as our top priority.</p>
+          </div>
+        </div>
+        <div class="bento-grid">
+          <div class="md:col-span-2 md:row-span-2 rounded-xl overflow-hidden relative group reveal-on-scroll">
+            <img 
+              alt="Luxury waiting room with designer chairs and natural light" 
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcyKdhQ9Dr8z2G-UyaJOD8snP88Cni0iJ1Fsfy1vrDWRKObBD3A-XZcqrJ_L-7IsnMQPmrjcuXo-BrsbVZ4uNkd9yWL_1-SLoh_EUcqZPBkA-BdjhXmYmrTNdNZixq0T3QjLZEnBPdZtbqxt_2THR_feOkKnM_ADFUl0LixqLdWlBstYjr_ut_kh-F2iqnb5Bx1ufEVAlbGfoSqLzt0JooTQ3_EI63gJubfhEbawhz3qZ9CGkumDXvAoQYWFbuC8G2Z7_CAlTdFxg"
+              loading="lazy"
+              width="800"
+              height="600"
+            />
+            <div class="absolute bottom-0 left-0 right-0 p-lg bg-gradient-to-t from-primary/80 to-transparent">
+              <p class="text-white font-title-lg text-title-lg">The Relaxation Lounge</p>
+            </div>
+          </div>
+          <div class="rounded-xl overflow-hidden relative group reveal-on-scroll">
+            <img 
+              alt="Digital dental diagnostics technology display" 
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTNLQNdYsndcqwrjCHzGSj8hivaJmXIPZbG1gNyFBVNqcNFgd7zomqRWTFi8bBFxH4YrnzFY4MYnGSoNwK-btqjCFaV27X-Tuv75Tjqw3RAHqCUE_BJ5q5RW-rb9aXOlEv1kjrbhGepRyvh8QclN3s6HQDwUgPCquYHqonq9dkxWyF70cEeTmLzdRQTxdpYdSQRmHeeTqfTW-dynCEHTfUJ-65Q5z4wGkZIvTSdaxw2N3zDcF1zyTR1NBSlM2jL7QVbhcsGWOX00A"
+              loading="lazy"
+              width="400"
+              height="300"
+            />
+            <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <span class="text-white font-label-md text-label-md bg-secondary/80 px-4 py-2 rounded-full">Digital Diagnostics</span>
+            </div>
+          </div>
+          <div class="rounded-xl overflow-hidden relative group reveal-on-scroll">
+            <img 
+              alt="Clean, minimalist dental operatory with natural light" 
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDn9rE4hkmdvPUnSaKgwxDaQVIeKMCtS6r3FB4UwwGcIWM-pU3oUO9PNfX1sVsOJT8asRNZ2KPLZF1FDdGBKyMPWdPk0-tRLgjA54YUtzkqRxZkwuLrr_3MCUdNcvs5iSNw8wLeRVdqI8sMMdftDf8qIVfWfFAlNhWxa2_ruH2nucObP0hC87PMheP2sadAZBgRIM5IzIYexx8hVCz-BDNR6mzvqd-5gurrAFzf9-LunGCTGehTNixx2oLj4BBkmMgt13RTewOFOzo"
+              loading="lazy"
+              width="400"
+              height="300"
+            />
+          </div>
+          <div class="md:col-span-2 rounded-xl overflow-hidden relative group reveal-on-scroll">
+            <img 
+              alt="In-house dental laboratory with precision tools and ceramics" 
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAvxaz9u82iHnno-IlqLfwh-2bP09ibR0bzrqKKKJjunWFEHff7ZPbk6zk7rnEFb9Grb-u-d41ez4E7sgxBgwz2bIs_CAxyC_RVzRGFvf-rPQuHz4yFc0vLVlLcyM4gr2dZhlWsJ6T-KO86qsByJXNgk-B1oCrO-0ca1gitZyO4FsLE0gP-hoRt0sYiPFcPFfAONove55Esp955TNeYsF6Kz46VBfs-Qju7EnIcVxsHPscojeTq4LVrqRPfaf44BCOGc4s-5W9y_s"
+              loading="lazy"
+              width="800"
+              height="300"
+            />
+            <div class="absolute bottom-0 right-0 p-md">
+              <div class="glass-card px-4 py-2 rounded-lg">
+                <p class="text-primary font-label-md text-label-md font-bold">In-House Lab Excellence</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        document.querySelectorAll('section > div').forEach(el => {
-            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
-            observer.observe(el);
+    <!-- CTA Section -->
+    <section class="py-xl" aria-labelledby="cta-title">
+      <div class="max-w-container-max mx-auto px-gutter">
+        <div class="bg-primary rounded-3xl p-lg md:p-xl flex flex-col md:flex-row items-center justify-between gap-lg relative overflow-hidden reveal-on-scroll">
+          <!-- Background Glows -->
+          <div class="absolute -top-24 -left-24 w-64 h-64 bg-secondary/20 rounded-full blur-3xl" aria-hidden="true"></div>
+          <div class="absolute -bottom-24 -right-24 w-64 h-64 bg-secondary-container/10 rounded-full blur-3xl" aria-hidden="true"></div>
+          
+          <div class="relative z-10 text-center md:text-left">
+            <h2 id="cta-title" class="font-display-lg text-headline-md text-white mb-sm">Ready to begin your journey?</h2>
+            <p class="font-body-lg text-body-lg text-primary-fixed max-w-lg">Join the SereneSmile family today and experience dental care as it should be.</p>
+          </div>
+          
+          <div class="relative z-10 flex flex-col sm:flex-row gap-md w-full md:w-auto">
+            <a href="/appointment" class="bg-secondary text-on-secondary px-8 py-4 rounded-full font-label-md text-label-md hover:bg-secondary-fixed transition-all shadow-lg active:scale-95 text-center">Book Online</a>
+            <a href="/pricing" class="border border-outline-variant text-white px-8 py-4 rounded-full font-label-md text-label-md hover:bg-white/10 transition-all active:scale-95 text-center">View Pricing</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-surface-container dark:bg-inverse-surface border-t border-outline-variant w-full py-xl" role="contentinfo">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-lg px-gutter max-w-container-max mx-auto">
+      <div class="space-y-md">
+        <div class="font-headline-md text-headline-md-mobile text-primary dark:text-primary-fixed">SereneSmile</div>
+        <p class="text-on-surface-variant dark:text-outline-variant font-body-md text-body-md">Redefining dental wellness through empathy and advanced technology.</p>
+      </div>
+      <div>
+        <h4 class="font-title-lg text-primary mb-md">Quick Links</h4>
+        <ul class="space-y-base">
+          <li><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-label-md text-label-md" href="/about">About Us</a></li>
+          <li><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-label-md text-label-md" href="/services">Services</a></li>
+          <li><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-label-md text-label-md" href="/portal">Patient Portal</a></li>
+          <li><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-label-md text-label-md" href="/insurance">Insurance</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-title-lg text-primary mb-md">Contact</h4>
+        <address class="not-italic space-y-base">
+          <p class="flex items-center gap-base text-on-surface-variant dark:text-outline-variant">
+            <span class="material-symbols-outlined text-secondary" aria-hidden="true">location_on</span>
+            <span class="font-body-md text-body-md">123 Serenity Blvd, Health City</span>
+          </p>
+          <p class="flex items-center gap-base text-on-surface-variant dark:text-outline-variant">
+            <span class="material-symbols-outlined text-secondary" aria-hidden="true">call</span>
+            <a href="tel:+15557373630" class="hover:underline">+1 (555) SERENE-0</a>
+          </p>
+          <p class="flex items-center gap-base text-on-surface-variant dark:text-outline-variant">
+            <span class="material-symbols-outlined text-secondary" aria-hidden="true">mail</span>
+            <a href="mailto:hello@serenesmile.com" class="hover:underline">hello@serenesmile.com</a>
+          </p>
+        </address>
+      </div>
+      <div>
+        <h4 class="font-title-lg text-primary mb-md">Newsletter</h4>
+        <p class="text-on-surface-variant dark:text-outline-variant mb-md font-body-md text-body-md">Monthly health tips and clinic updates.</p>
+        <!-- Formspree integration ready - replace YOUR_FORMSPREE_ID -->
+        <form class="flex flex-col gap-base" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+          <label for="newsletter-email" class="sr-only">Email address</label>
+          <input 
+            id="newsletter-email"
+            class="bg-surface border border-outline-variant rounded-lg p-3 text-body-md focus:border-secondary focus:ring-1 focus:ring-secondary transition-all outline-none" 
+            placeholder="Email address" 
+            type="email" 
+            name="email"
+            required
+          />
+          <button class="bg-primary text-white p-3 rounded-lg font-label-md hover:opacity-90" type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="max-w-container-max mx-auto px-gutter mt-xl pt-lg border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-md">
+      <p class="text-on-surface-variant dark:text-outline-variant font-label-md text-label-md">© <span id="year">2026</span> SereneSmile Dental Clinic. All rights reserved.</p>
+      <div class="flex gap-lg">
+        <a class="text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors font-label-md text-label-md" href="/privacy">Privacy Policy</a>
+        <a class="text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors font-label-md text-label-md" href="/terms">Terms of Service</a>
+        <a class="text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors font-label-md text-label-md" href="/emergency">Emergency Care</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript: Scroll Reveal + Utilities -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Auto-update copyright year
+      const yearEl = document.getElementById('year');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+      
+      // Scroll reveal animation with Intersection Observer
+      const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target); // Only animate once
+          }
         });
-    </script>
-</body></html>
+      }, observerOptions);
+      
+      document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+        observer.observe(el);
+      });
+      
+      // Smooth scroll for anchor links (enhanced for sticky header)
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          if (href === '#' || href === '') return;
+          
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            const headerOffset = 80;
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            
+            window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+          }
+        });
+      });
+      
+      // Mobile menu toggle (basic implementation)
+      const mobileBtn = document.querySelector('[aria-label="Toggle menu"]');
+      const nav = document.querySelector('nav');
+      if (mobileBtn) {
+        mobileBtn.addEventListener('click', function() {
+          const expanded = this.getAttribute('aria-expanded') === 'true';
+          this.setAttribute('aria-expanded', !expanded);
+          // Add your mobile menu toggle logic here
+        });
+      }
+    });
+  </script>
+</body>
+</html>
